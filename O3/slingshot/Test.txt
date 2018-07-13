@@ -1,0 +1,3 @@
+Analyzing commit in git.
+
+2. Modified by second user.

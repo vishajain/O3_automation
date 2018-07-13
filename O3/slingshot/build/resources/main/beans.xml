@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <import resource="pages.xml"/>
+
+    <bean class="org.springframework.beans.factory.config.PropertyPlaceholderConfigurer"
+          id="slingShotPlaceholderConfigurer">
+        <property name="locations">
+            <list>
+                <value>file:slingshot.properties</value>
+            </list>
+        </property>
+    </bean>
+
+    <bean class="java.util.ArrayList" id="keywords">
+        <constructor-arg>
+            <list>
+                <value>PAGE</value>
+                <value>ON</value>
+                <value>ENTER</value>
+                <value>DATA</value>
+                <value>PERFORM</value>
+                <value>VERIFY</value>
+                <value>CHECK</value>
+                <value>SUBMIT</value>
+                <value>CLICK</value>
+            </list>
+        </constructor-arg>
+    </bean>
+	
+	<!-- <bean class="com.O3.utils.DataReader" id="dataReader"/> -->
+	<bean class="com.O3.slingshot.reader.DataReader" id="dataReader">
+		<property name="inputDataFile" value="${inputdata.file.location}"/>
+	</bean>
+
+    <bean class="com.O3.slingshot.parser.FeatureParser" id="featureParser">
+        <property name="folder" value="${specifications.folder.location}"/>
+        <property name="extension" value="${feature.file.extension}"/>
+        <property name="dataReader" ref="dataReader"/>
+        <property name="groups" value="${specifications.groups.to.execute}"/>
+    </bean>
+    
+    <bean class="com.O3.slingshot.parser.FeatureParser" id="backgroundParser">
+        <property name="folder" value="${specifications.folder.location}"/>
+        <property name="extension" value="${feature.file.extension}"/>
+        <property name="groups" value="${feature.file.extension}"/>
+    </bean>
+
+    <bean class="com.O3.slingshot.processor.FeatureProcessor" id="featureProcessor" scope="prototype">
+        <property name="features" value="${specifications.to.execute}"/>
+        <property name="featureParser" ref="featureParser"/>
+        <property name="featureValidator" ref="featureValidator"/>
+        <property name="featureExecutor" ref="featureExecutor"/>
+        <property name="featureTokenizer" ref="featureTokenizer"/>
+        <property name="reportGenerator" ref="reportGenerator"/>
+    </bean>
+
+
+	<bean class="com.O3.slingshot.parser.AnnotationParser" id="annotationParser"/>
+
+    <bean class="com.O3.slingshot.validator.FeatureValidator" id="featureValidator"/>
+
+    <bean class="com.O3.slingshot.tokenizer.FeatureTokenizer" id="featureTokenizer"/>
+
+    <bean class="com.O3.slingshot.executor.FeatureExecutor" id="featureExecutor">
+    	<property name="slingShotWeb" ref="slingShotWeb"/>
+        <property name="commandExecutor" ref="commandExecutor"/>
+    </bean>
+
+    <bean class="com.O3.slingshot.commands.CommandExecutor" id="commandExecutor"/>
+
+    
+    <bean class="com.O3.slingshot.commands.PageCommand" id="pageCommand">
+   		<property name="slingShotWeb" ref="slingShotWeb"/>
+    	<property name="o3Dsl" ref="o3Dsl"/>
+    </bean>
+
+    <bean class="com.O3.slingshot.commands.EnterCommand" id="enterCommand">
+        <property name="dataReader" ref="dataReader"/>
+        <property name="slingShotWeb" ref="slingShotWeb"/>
+    	<property name="o3Dsl" ref="o3Dsl"/>
+    </bean>
+    
+    <bean class="com.O3.slingshot.commands.SubmitCommand" id="submitCommand">
+        <property name="slingShotWeb" ref="slingShotWeb"/>
+    	<property name="o3Dsl" ref="o3Dsl"/>
+    </bean>
+
+    <bean class="com.O3.slingshot.commands.PerformCommand" id="performCommand">
+        <property name="slingShotWeb" ref="slingShotWeb"/>
+        <property name="formValidator" ref="formValidator"/>
+        <property name="o3Dsl" ref="o3Dsl"/>
+    </bean>
+    
+    <bean class="com.O3.slingshot.commands.VerifyCommand" id="verifyCommand">
+        <property name="slingShotWeb" ref="slingShotWeb"/>
+        <property name="formValidator" ref="formValidator"/>
+        <property name="o3Dsl" ref="o3Dsl"/>
+    </bean>
+    
+    <bean class="com.O3.slingshot.commands.CheckCommand" id="checkCommand">
+        <property name="slingShotWeb" ref="slingShotWeb"/>
+        <property name="formValidator" ref="formValidator"/>
+        <property name="o3Dsl" ref="o3Dsl"/>
+    </bean>
+
+    <bean class="com.O3.slingshot.commands.ClickCommand" id="clickCommand">
+        <property name="slingShotWeb" ref="slingShotWeb"/>
+        <property name="o3Dsl" ref="o3Dsl"/>
+    </bean>
+
+    <bean class="com.O3.slingshot.browser.SlingShotWeb" id="slingShotWeb"/>
+
+    <bean class="com.O3.utils.FormValidator" id="formValidator"/>
+
+    <!-- beans alias for various tokens supported -->
+    <alias name="enterCommand" alias="ENTER"/>
+    <alias name="submitCommand" alias="SUBMIT"/>
+    <!-- <alias name="pageCommand" alias="PAGE"/> -->
+    <alias name="pageCommand" alias="ON"/>
+    <alias name="performCommand" alias="PERFORM"/>
+    <alias name="verifyCommand" alias="VERIFY"/>
+    <alias name="checkCommand" alias="CHECK"/>
+    <alias name="clickCommand" alias="CLICK"/>
+
+    <bean id="reportGenerator" class="com.O3.slingshot.report.ReportGenerator"/>
+
+</beans>

@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+	<title>Cucumber-JVM Html Reports - Feature:  To test successful and unsuccessful scenarios of transaction </title>
+	<link rel="stylesheet" href="blue/css/style.css" type="text/css" media="screen" />
+	<link rel="stylesheet" href="blue/css/skin/style.css" type="text/css" media="screen" />
+	<link rel="stylesheet" href="blue/css/960.css" type="text/css" media="screen" />
+	<link rel="stylesheet" href="blue/css/reset.css" type="text/css" media="screen" />
+	<link rel="stylesheet" href="blue/css/text.css" type="text/css" media="screen" />
+	<link rel="shortcut icon" href="blue/favicon.ico" />
+    <style>
+    .CodeMirror-scroll {
+      height: auto;
+      overflow-y: hidden;
+      overflow-x: auto;
+    }
+
+.feature-keyword{font-weight:bold;}
+.feature-description{padding-left:15px;font-style:italic;background-color:beige;}
+.feature-role{font-weight:bold;}
+.feature-action{font-weight:bold;}
+.feature-value{font-weight:bold;}
+.feature-tags{padding-top:10px;padding-left:15px;color:darkblue;}
+.scenario-keyword{font-weight:bold;padding-left:15px;}
+.scenario-scenario_name{padding-left:15px;}
+.step-keyword{font-weight:bold;padding-left:50px;}
+.step-error-message{background-color:#FFEEEE;padding-left:50px;border: 1px solid #D88A8A;}
+.step-duration{float:right;padding-right:15px;}
+.passed{background-color:#C5D88A;}
+.failed{background-color:#D88A8A;}
+.skipped{background-color:#2DEAEC;}
+.undefined{background-color: #ebcc81;}
+
+table.stats-table {
+color:black;
+border-width: 1px;
+border-spacing: 2px;
+border-style: outset;
+border-color: gray;
+border-collapse: collapse;
+background-color: white;
+}
+table.stats-table th {
+color:black;
+border-width: 1px;
+padding: 5px;
+border-style: inset;
+border-color: gray;
+background-color: #66CCEE;
+-moz-border-radius: ;
+}
+table.stats-table td {
+color:black;
+text-align: center;
+border-width: 1px;
+padding: 5px;
+border-style: inset;
+border-color: gray;
+background-color: white;
+-moz-border-radius: ;
+}
+
+table.data-table {
+    color: black;
+    border-width: 1px;
+    border-spacing: 2px;
+    border-style: outset;
+    border-color: #d6d6d6;
+    border-collapse: collapse;
+    background-color: beige;
+}
+table.data-table th {
+    color:black;
+    border-width: 1px;
+    padding: 5px;
+    border-style: inset;
+    border-color: #d6d6d6;
+    background-color: #66CCEE;
+}
+table.data-table td {
+    color:black;
+    text-align: center;
+    border-width: 1px;
+    padding: 5px;
+    border-style: inset;
+    border-color: #d6d6d6;
+    background-color: beige;
+}
+
+.data {
+   padding-left:50px;
+    padding-bottom: 10px;
+    padding-top: 10px;
+}
+
+.output-data {
+    padding-left:50px;
+    background-color: beige;
+}
+
+.doc-string {
+    width:auto;
+    display:inline-block;
+    margin: 10px auto 10px 70px;
+    padding: 10px;
+    background-color:rgba(255,255,255,0.35);
+    border-radius: 10px;
+    font-family: "Courier New", Courier, monospace;
+    font-size: 95%;
+}
+</style>
+
+</head>
+<body id="top">
+	<div id="fullwidth_header">
+		<div class="container_12">
+			<h1 class="grid_4 logo"><a href="feature-overview.html" class='ie6fix'>Cucumber</a></h1>
+			<div class="grid_6" id="nav">
+				<ul>
+                    					<li><a href="tag-overview.html">Tag Overview</a></li>
+					<li><a href="feature-overview.html">Feature Overview</a></li>
+				</ul>
+			</div>
+		</div>
+	</div>
+	<div id="fullwidth_gradient">
+		<div class="container_12">
+			<div class="grid_9 heading">
+				<h2 id="feature-title">Feature Result for Build: </h2>
+			</div>
+		</div>
+	</div>
+
+	<div class="container_12">
+		<div class="grid_12">
+
+            <div>
+                <table class="stats-table">
+                    <tr>
+    <th></th>
+    <th id="stats-header-scenarios" colspan="3">Scenarios</th>
+    <th id="stats-header-steps" colspan="5">Steps</th>
+    <th></th>
+    <th></th>
+</tr>
+<tr>
+    <th id="stats-header-feature">Feature</th>
+    <th id="stats-header-scenarios-total">Total</th>
+    <th id="stats-header-scenarios-passed">Passed</th>
+    <th id="stats-header-scenarios-failed">Failed</th>
+    <th id="stats-header-steps-total">Total</th>
+    <th id="stats-header-steps-passed" style="background-color:#C5D88A;">Passed</th>
+    <th id="stats-header-steps-failed" style="background-color:#D88A8A;">Failed</th>
+    <th id="stats-header-steps-skipped" style="background-color:#2DEAEC;">Skipped</th>
+    <th id="stats-header-steps-pending" style="background-color:#ebcc81;">Pending</th>
+    <th id="stats-header-duration">Duration</th>
+    <th id="stats-header-status">Status</th>
+</tr>
+
+                    <tr>
+                        <td><a id="stats- To test successful and unsuccessful scenarios of transaction" href="O3-slingshot-_To_test_successful_and_unsuccessful_scenarios_of_transaction.feature.html"> To test successful and unsuccessful scenarios of transaction</a></td>
+                        <td id="stats-number-scenarios- To test successful and unsuccessful scenarios of transaction">1</td>
+                        <td id="stats-number-scenarios-passed- To test successful and unsuccessful scenarios of transaction">1</td>
+                        <td id="stats-number-scenarios-failed- To test successful and unsuccessful scenarios of transaction">0</td>
+                        <td id="stats-number-steps- To test successful and unsuccessful scenarios of transaction">23</td>
+                        <td id="stats-number-steps-passed- To test successful and unsuccessful scenarios of transaction">23</td>
+                        <td id="stats-number-steps-failed- To test successful and unsuccessful scenarios of transaction">0</td>
+                        <td id="stats-number-steps-skipped- To test successful and unsuccessful scenarios of transaction">0</td>
+                        <td id="stats-number-steps-pending- To test successful and unsuccessful scenarios of transaction">0</td>
+                        <td id="stats-duration- To test successful and unsuccessful scenarios of transaction">2 mins and 18 secs and 744 ms</td>
+                        <td id="stats-status- To test successful and unsuccessful scenarios of transaction" style="background-color: #C5D88A;">passed</td>
+                    </tr>
+                                    </table>
+
+            </div>
+
+		<div style="color:black;">
+
+            <div class="feature-tags"></div>
+            <div class="passed"><div class="feature-line"><span class="feature-keyword">Feature:</span>  To test successful and unsuccessful scenarios of transaction</div></div>
+            <div class="feature-description">Feature: To test successful and unsuccessful scenarios of transaction<br/>  As a User of the application<br/>  <span class="feature-action">I want to</span> test Transactions functionality<br/></div>
+			                            <div class="feature-tags"></div>
+                <div class="passed"><span class="scenario-keyword">Background: </span> <span class="scenario-name">1) <b>loginSuccess</b> -  To verify the successful login with DATA LoginDashboard_Success<div style='padding-left:30px;font-style:italic;'>Input Data: [[8210101011, Welcome@123], []] </div></span></div>
+                	            	<a name="1"></a>
+	            	                  <div class="passed"><span class="step-keyword"> </span><span class="step-name">1. Given I am ON login page</span><span class="step-duration">312 ms</span></div>
+                    
+                                      <div class="output-data"></div>
+                	            	<a name="2"></a>
+	            	                  <div class="passed"><span class="step-keyword"> </span><span class="step-name">2. And I ENTER valid login credentials with DATA LoginDashboard_Success</span><span class="step-duration">4 secs and 786 ms</span></div>
+                    
+                                      <div class="output-data"></div>
+                	            	<a name="3"></a>
+	            	                  <div class="passed"><span class="step-keyword"> </span><span class="step-name">3. And I SUBMIT the form</span><span class="step-duration">19 secs and 188 ms</span></div>
+                    
+                                      <div class="output-data"></div>
+                                            <div class="feature-tags"></div>
+                <div class="passed"><span class="scenario-keyword">Background: </span> <span class="scenario-name">2) <b>FundSuccess</b> -  To verify add fund functionality using Pay By Cheque option with valid details with DATA ChequePayment_Success<div style='padding-left:30px;font-style:italic;'>Input Data: [[2000, 346434, FilesValidFileSizesHotelRomedy.jpg], []] </div></span></div>
+                	            	<a name="4"></a>
+	            	                  <div class="passed"><span class="step-keyword"> </span><span class="step-name">1. Given I am ON dashboard</span><span class="step-duration">275 ms</span></div>
+                    
+                                      <div class="output-data"></div>
+                	            	<a name="5"></a>
+	            	                  <div class="passed"><span class="step-keyword"> </span><span class="step-name">2. And I PERFORM storedAmount</span><span class="step-duration">2 secs and 176 ms</span></div>
+                    
+                                      <div class="output-data"></div>
+                	            	<a name="6"></a>
+	            	                  <div class="passed"><span class="step-keyword"> </span><span class="step-name">3. When I CLICK addFund</span><span class="step-duration">17 secs and 221 ms</span></div>
+                    
+                                      <div class="output-data"></div>
+                	            	<a name="7"></a>
+	            	                  <div class="passed"><span class="step-keyword"> </span><span class="step-name">4. Then I am ON payOnline page</span><span class="step-duration">245 ms</span></div>
+                    
+                                      <div class="output-data"></div>
+                	            	<a name="8"></a>
+	            	                  <div class="passed"><span class="step-keyword"> </span><span class="step-name">5. When I CLICK payByCheque link</span><span class="step-duration">17 secs and 238 ms</span></div>
+                    
+                                      <div class="output-data"></div>
+                	            	<a name="9"></a>
+	            	                  <div class="passed"><span class="step-keyword"> </span><span class="step-name">6. Then I am ON payByCheque screen</span><span class="step-duration">183 ms</span></div>
+                    
+                                      <div class="output-data"></div>
+                	            	<a name="10"></a>
+	            	                  <div class="passed"><span class="step-keyword"> </span><span class="step-name">7. And I ENTER payByChequeAmount valid data with DATA ChequePayment_Success</span><span class="step-duration">12 secs and 706 ms</span></div>
+                    
+                                      <div class="output-data"></div>
+                	            	<a name="11"></a>
+	            	                  <div class="passed"><span class="step-keyword"> </span><span class="step-name">8. And I SUBMIT payByChequeAmount form</span><span class="step-duration">8 secs and 60 ms</span></div>
+                    
+                                      <div class="output-data"></div>
+                	            	<a name="12"></a>
+	            	                  <div class="passed"><span class="step-keyword"> </span><span class="step-name">9. And I CLICK cropNSave</span><span class="step-duration">30 secs and 139 ms</span></div>
+                    
+                                      <div class="output-data"></div>
+                	            	<a name="13"></a>
+	            	                  <div class="passed"><span class="step-keyword"> </span><span class="step-name">10. Then I am ON dashboard</span><span class="step-duration">220 ms</span></div>
+                    
+                                      <div class="output-data"></div>
+                                            <div class="feature-tags">KRA</div>
+                <div class="passed"><span class="scenario-keyword">Scenario: </span> <span class="scenario-name">1)  To verify filter based on amount parameter</span></div>
+                	            	<a name="14"></a>
+	            	                  <div class="passed"><span class="step-keyword"> </span><span class="step-name">1. Given I am ON dashboard</span><span class="step-duration">105 ms</span></div>
+                    
+                                      <div class="output-data"></div>
+                	            	<a name="15"></a>
+	            	                  <div class="passed"><span class="step-keyword"> </span><span class="step-name">2. And I CLICK userOption</span><span class="step-duration">5 secs and 167 ms</span></div>
+                    
+                                      <div class="output-data"></div>
+                	            	<a name="16"></a>
+	            	                  <div class="passed"><span class="step-keyword"> </span><span class="step-name">3. When I CLICK transactions</span><span class="step-duration">15 secs and 224 ms</span></div>
+                    
+                                      <div class="output-data"></div>
+                	            	<a name="17"></a>
+	            	                  <div class="passed"><span class="step-keyword"> </span><span class="step-name">4. Then I am ON transactions page</span><span class="step-duration">162 ms</span></div>
+                    
+                                      <div class="output-data"></div>
+                	            	<a name="18"></a>
+	            	                  <div class="passed"><span class="step-keyword"> </span><span class="step-name">5. And I PERFORM amountBasedSort</span><span class="step-duration">1 sec and 239 ms</span></div>
+                    
+                                      <div class="output-data"></div>
+                	            	<a name="19"></a>
+	            	                  <div class="passed"><span class="step-keyword"> </span><span class="step-name">6. Then I am ON transactions page</span><span class="step-duration">121 ms</span></div>
+                    
+                                      <div class="output-data"></div>
+                	            	<a name="20"></a>
+	            	                  <div class="passed"><span class="step-keyword"> </span><span class="step-name">7. And I PERFORM deleteTransactions</span><span class="step-duration">1 sec and 629 ms</span></div>
+                    
+                                      <div class="output-data"></div>
+                	            	<a name="21"></a>
+	            	                  <div class="passed"><span class="step-keyword"> </span><span class="step-name">8. Then I am ON transactions page</span><span class="step-duration">120 ms</span></div>
+                    
+                                      <div class="output-data"></div>
+                	            	<a name="22"></a>
+	            	                  <div class="passed"><span class="step-keyword"> </span><span class="step-name">9. And I PERFORM logout action</span><span class="step-duration">2 secs and 136 ms</span></div>
+                    
+                                      <div class="output-data"></div>
+                	            	<a name="23"></a>
+	            	                  <div class="passed"><span class="step-keyword"> </span><span class="step-name">10. Then I am ON login page</span><span class="step-duration">92 ms</span></div>
+                    
+                                      <div class="output-data"></div>
+                            
+	</div>
+	</div>
+	
+	
+
+	<div class="container_12">
+		<div class="grid_12 hr"></div>
+		<div class="grid_12 footer">
+            <p style="text-align:center;">Cucumber-JVM Jenkins Report Plugin - version: cucumber-reporting-0.0.24 - 29-06-2018 15:43:18</p>
+		</div>
+	</div>
+	<div class="clear"></div>
+	
+	
+</body>

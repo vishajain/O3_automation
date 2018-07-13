@@ -1,0 +1,5 @@
+﻿
+a[@href=’http://www.google.com’]
+input[@id=’name’]
+input[@name=’username’]
+img[@alt=’sometext’]
