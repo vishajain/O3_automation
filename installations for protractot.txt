@@ -1,0 +1,18 @@
+- NPM(node.js) installation
+NodeJs.org -> Downloads -> install the package as per latest configuration and operating systemn.
+
+- Check NPM version
+npm -version
+
+- Install protractor from cmd
+npm install -g protractor
+
+-JDK installation
+
+- Install Webdriver manager from cmd
+webdriver-manager update 
+
+-Start Webdriver manager from cmd
+webdriver-manager start
+
+
